@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Boba - Subscription Required</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #1a6da9;
+      color: #f9c909;
+      max-width: 450px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 4px;
+    }
+
+    p {
+      color: #555555;
+      font-size: 14px;
+      margin-top: 0;
+    }
+
+    .graphic-container {
+      margin: 24px 0;
+    }
+
+    .btn-drink {
+      background-color: #4a2c11;
+      color: #e01a1a;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .btn-drink:hover {
+      background-color: #fffc4b;
+    }
+
+    .error-box {
+      display: none;
+      margin-top: 24px;
+      border: 1px solid #f8dd18e4;
+      background-color: #48684d;
+      padding: 16px;
+      text-align: left;
+    }
+
+    .error-title {
+      color: #cc0000;
+      font-weight: bold;
+      margin: 0 0 8px 0;
+      font-size: 15px;
+    }
+
+    .error-desc {
+      font-size: 13px;
+      color: #333333;
+      margin-bottom: 12px;
+    }
+
+    .sub-box {
+      border: 1px solid #cccccc;
+      background-color: #ffffff;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .sub-price {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .btn-sub {
+      background-color: #008000;
+      color: #ba0b0b;
+      border: none;
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .btn-sub:hover {
+      background-color: #07f007;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <h1>LETS DRINK</h1>
+  <p>COFFEE (ANY TYPE OF COFFEE U ASSUME,JUST DRINK IT)</p>
+
+  <!-- Static Boba Cup SVG Graphic -->
+  <div class="graphic-container">
+    <svg width="140" height="190" viewBox="0 0 140 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Straw -->
+      <rect x="63" y="5" width="14" height="60" fill="#EF4444" />
+      
+      <!-- Cup Body -->
+      <path d="M20 50 L120 50 L105 175 C104 182, 98 185, 90 185 L50 185 C42 185, 36 182, 35 175 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="2" />
+      
+      <!-- Coffee Fill -->
+      <path d="M23 60 L117 60 L103 173 C102 180, 97 182, 90 182 L50 182 C43 182, 38 180, 37 173 Z" fill="#4A2C11" />
+      
+      <!-- Coffee Crema Layer -->
+      <rect x="23" y="60" width="94" height="10" fill="#78350F" />
+      
+      <!-- Boba Pearls -->
+      <circle cx="50" cy="165" r="8" fill="#1E1B18" />
+      <circle cx="70" cy="168" r="8" fill="#1E1B18" />
+      <circle cx="90" cy="165" r="8" fill="#1E1B18" />
+      <circle cx="60" cy="150" r="8" fill="#1E1B18" />
+      <circle cx="80" cy="152" r="8" fill="#1E1B18" />
+      <circle cx="70" cy="135" r="8" fill="#1E1B18" />
+    </svg>
+  </div>
+
+  <!-- Primary Action Button -->
+  <button id="drinkBtn" class="btn-drink" onclick="showError()">Drink Boba</button>
+
+  <!-- Error Section -->
+  <div id="errorBox" class="error-box">
+    <p class="error-title"> Error 402: Payment Required</p>
+    <p class="error-desc">You have reached your free daily sip limit! Please upgrade to Boba+ Pro to unlock drinking features.</p>
+    
+    <div class="sub-box">
+      <div class="sub-price">$4.99 / month</div>
+      <button class="btn-sub" onclick="buySubscription()">Buy Boba+ Subscription</button>
+    </div>
+  </div>
+
+  <script>
+    function showError() {
+      document.getElementById('errorBox').style.display = 'block';
+    }
+
+    function buySubscription() {
+      alert("Payment Failed: Your wallet is empty!");
+    }
+  </script>
+</body>
+</html>
